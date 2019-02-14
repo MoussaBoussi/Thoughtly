@@ -5,7 +5,7 @@ const socialposts = {
     controller: [function(){
         const vm = this
         vm.postList = [
-            {title: "test post",content: "please ignore",score: 99, deletable: false},
+            {title: "test post",content: "please ignore",score: 98, deletable: false},
             {title: "Check out the responsiveness",content: "it looks pretty alright on mobile :)",score: 8, deletable: false},
             {title: "Data binding is pretty chill",content: "directives are pretty alright",score: 13, deletable: false},
             {title: "Try making a new post",content: "",score: 17, deletable: false},
