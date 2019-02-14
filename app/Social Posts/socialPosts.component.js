@@ -5,16 +5,18 @@ const socialposts = {
     controller: [function(){
         const vm = this
         vm.postList = [
-            {title: "Test Post",content: "please ignore",score: 200},
-            {title: "Feature request",content: "You know what would be cool? sorting by new and top! also maybe a search bar :D",score: 57},
-            {title: "Hey this site is pretty alright",content: "anyone else think so?",score: 13},
-            {title: "This site is useless",content: "",score: -61},
-            {title: "hmmm... 🤔",content: "Anxiety is like when video game combat music is playing but you can't find any enemies.",score: 32}
+            {title: "test post",content: "please ignore",score: 99, deletable: false},
+            {title: "Check out the responsiveness",content: "it looks pretty alright on mobile :)",score: 8, deletable: false},
+            {title: "Data binding is pretty chill",content: "directives are pretty alright",score: 13, deletable: false},
+            {title: "Try making a new post",content: "",score: 17, deletable: false},
+            {title: "Why did the developer go broke?🤔",content: "Because he used up all his cache ",score: 32, deletable: false},
+            {title: "Feature request",content: "add a search bar and filters! ",score: 57, deletable: false}
         ]
         vm.addPost = function (newPost) {
             newPost.score = 0
             newPost.hasUpvoted = false
             newPost.hasDownvoted = false
+            newPost.deletable = true
             vm.postList.push(angular.copy(newPost))
             vm.toggleForm()
         }
